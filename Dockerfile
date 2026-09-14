@@ -12,5 +12,3 @@ RUN apt-get update && \
         make \
         git \
     && rm -rf /var/lib/apt/lists/*
-
-USER openvscode-server
