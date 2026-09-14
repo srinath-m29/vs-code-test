@@ -13,7 +13,8 @@ RUN apt-get update && \
         git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN chown -R openvscode-server:openvscode-server /home/workspace \
+RUN chown -R openvscode-server:openvscode-server \
+    /home/workspace \
     /home/.openvscode-server
 
 USER openvscode-server
