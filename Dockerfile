@@ -14,11 +14,3 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 USER openvscode-server
-
-EXPOSE 10000
-
-ENTRYPOINT ["/bin/sh", "-c", \
-    "exec /home/.openvscode-server/bin/openvscode-server \
-    --host 0.0.0.0 \
-    --port ${PORT:-10000} \
-    --connection-token ${OPENVSCODE_TOKEN}"]
