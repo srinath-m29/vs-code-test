@@ -12,3 +12,8 @@ RUN apt-get update && \
         make \
         git \
     && rm -rf /var/lib/apt/lists/*
+
+RUN chown -R openvscode-server:openvscode-server /home/workspace \
+    /home/.openvscode-server
+
+USER openvscode-server
